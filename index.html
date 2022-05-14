@@ -15,6 +15,23 @@
             margin: 0 !important;
         }
     </style>
+     <script>
+        $(document).ready(function() {
+            var i = 1;
+            $("#btnDK").click(function() {
+                $("#myModal").modal();
+            });
+            $("#txtMaSV").blur(function() {
+                var mauKT = /^[1-9]{1}[0-9]{9}$/
+                var chuoi = $("txtMaSV").val();
+                if (mauKT.test(chuoi) == true) {
+                    alert("Bạn nhập đúng");
+                } else {
+                    alert("Bạn nhập sai");
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
